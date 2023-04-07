@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    word-spacing: 5px;
+    line-height: 1.15;
+    outline: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 80vh;
+    width: 70vw;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.image-mobile-container {
+    display: none;
+    width: 100vw;
+    height: 40vh;
+    background-image: url(images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.image-desktop-container {
+    width: 50%;
+    height: 100%;
+    background-image: url(images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-content {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+}
+
+.text-container {
+    margin: 10% 0;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    justify-content: space-between;
+    font-size: 1em;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 15px;
+
+}
+
+span {
+    font-weight: 300;
+    letter-spacing: 8px;
+    color: hsl(0, 36%, 70%);
+    line-height: 0.8;
+}
+
+p {
+    color: hsl(0, 36%, 70%);
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    width: 90%;
+    height: 3rem;
+    border-radius: 30px;
+    padding-left: 10px;
+    color: hsl(0, 93%, 68%);
+    border-color: rgba(255, 137, 137, 0.253);
+}
+
+input::placeholder {
+    color: hsl(0, 93%, 68%);
+    border: none;
+}
+
+#invalid-icon {
+    display: none;
+    position: absolute;
+    right: 25%;
+    top: 25%;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+#invalid-text {
+    display: none;
+    font-size: 13px;
+    color: hsl(0, 93%, 58%);
+}
+
+#email-submit-btn {
+    border: none;
+    width: 20%;
+    height: 3rem;
+    border-radius: 30px;
+    position: absolute;
+    left: 88%;
+    background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    transform: translateX(-40px);
+}
+
+#email-submit-btn img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#email-submit-btn:hover {
+        background: linear-gradient(to right, hsl(0, 100%, 98%), hsl(0, 80%, 86%));
+        cursor: pointer;
+}
+
+@media (max-width: 1039px) {
+    body{
+        max-width: 100vw;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+    main {
+        width: 100vw;
+        height: 100vh;
+    }
+    .image-desktop-container {
+        display: block;
+        width: 80%;
+    }
+
+    .main-content {
+        margin-top: 100px;
+        height: 100vh;
+    }
+
+    .text-container {
+        justify-content: flex-start;
+    }
+
+
+    h1 {
+        margin-top: 0px;
+        font-size: 3rem;
+    }
+
+    p {
+        margin: 30px 0;
+    }
+
+    .attribution {
+        display: none;
+    }
+}
+
+@media (max-width: 690px) {
+    .image-desktop-container {
+        display: none;
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 0;
+        max-width: 100vw;
+        max-height: 100vh;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .text-container {
+        width: 100vw;
+        height: 40vh;
+        align-items: center;
+        text-align: center;
+        padding: 0 40px;
+    }
+
+    .logo-container {
+        margin: 20px 0;
+        padding-left: 10%;
+    }
+
+    .logo-container img {
+        width: 80%;
+    }
+
+    .image-mobile-container {
+        display: block;
+        background-size: cover;
+    }
+
+    .text-container p, .text-container div {
+        margin: 4%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
